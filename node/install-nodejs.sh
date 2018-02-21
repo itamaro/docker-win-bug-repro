@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -e
-bash setup_4.x
+cat setup_4.x | tr -d '\r' | bash
 apt-get install -y --no-install-recommends nodejs
 rm -rf /var/lib/apt/lists/*
 
